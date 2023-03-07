@@ -1,0 +1,45 @@
+.head{
+    display: flex;
+    padding: 1.5rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.logo>img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.logo>span{
+    font-weight: bold;
+}
+.right{
+    display:flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+}
+.menu>li:hover{
+    cursor: pointer;;
+    color:crimson;
+}
+.search{
+    outline:none;
+    border-radius: 6px;
+    padding: 0.5rem;
+    border: none;
+    height: 30%;
+}
+.cart{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}

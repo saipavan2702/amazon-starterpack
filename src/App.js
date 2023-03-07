@@ -1,9 +1,14 @@
-import "./App.css";
+import './App.css';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import Slider from './components/Slider/Slider';
 
 function App() {
   return (
     <div className="App">
-      <span>Subscribe Zainkeepscode</span>
+     <Header/>
+     <Hero/>
+     <Slider/>
     </div>
   );
 }
