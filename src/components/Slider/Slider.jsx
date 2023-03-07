@@ -1,6 +1,7 @@
 import React from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { Pagination, Navigation } from 'swiper' 
+import {SliderProducts} from '../../data/products'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -11,9 +12,20 @@ const Slider = () => {
   return (
     <div className="s-container">
         <Swiper sidesPerView={3} spaceBetween={40} slidesPerGroup={1} loop={true} >
-            <SwiperSlide>1</SwiperSlide>
-            <SwiperSlide>2</SwiperSlide>
-            <SwiperSlide>3</SwiperSlide>
+          {SliderProducts.map((slide,i)=>(
+            <SwiperSlide>
+              <div className='slide'>
+                <div className='name'>
+                  <span>{slide.name}</span>
+                  <span>{slide.detail}</span>
+                </div>
+
+                <span>{slide.price}$</span>
+                <div>Buy Now</div>
+              </div>
+              <img src={slide.img} alt='product' className='img-p'/>
+            </SwiperSlide>
+          ))}
         </Swiper>
     </div>
   )
